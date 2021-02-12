@@ -1,0 +1,67 @@
+p {
+    text-align: center;
+}
+
+.marquee-text {
+    margin: 30px auto;
+    border: 1px solid #000;
+    max-width: 60%;
+    overflow: hidden;
+}
+
+.marquee-text div {
+    width: 100%;
+    animation: marquee-text 5s linear infinite;
+}
+
+.marquee-infinite {
+    margin: 30px auto;
+    border: 1px solid #000;
+    max-width: 60%;
+    overflow: hidden;
+}
+
+/*Здесь можно поиграть со свойством width: mac-content*/
+.marquee-infinite div {
+    display: flex;
+    width: 200%;
+    animation: marquee-infinite 5s linear infinite;
+}
+
+.marquee-infinite h1 {
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee-infinite span {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.marquee-infinite img {
+    width: 20%;
+}
+
+.marquee-infinite:hover div {
+    animation-play-state: paused;
+}
+
+
+@keyframes marquee-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee-infinite {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
